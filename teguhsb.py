@@ -92,7 +92,7 @@ sw = LineClient("012botsc@gmail.com","teguh1234")
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
-print("-LOGIN SUCCES BOSS-")
+print("---LOGIN SUCCES BOSS-")
 
 poll = LinePoll(cl)
 call = cl
