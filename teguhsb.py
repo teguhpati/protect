@@ -3658,9 +3658,11 @@ def bot(op):
                         elif text.lower() == 'salam':
                                cl.sendMessage(msg.to, "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
                         elif text.lower() == 'assalamualaikum':
-                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ  ")
+                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
                         elif text.lower() == 'waalaikumsalam':
                                cl.sendMessage(msg.to, "ُIKUT JAWAH AHHHH \nWa'alaikumsalam WR.WB")
+                        elif text.lower() == 'assalamualaikum wr wb':
+                               cl.sendMessage(msg.to, "ُوَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
 
                         elif cmd.startswith("mid "):
                           if wait["selfbot"] == True:
@@ -3991,7 +3993,7 @@ def bot(op):
                             except:
                                 pass
 #Spamcallto
-                        elif cmd.startswith("spamcallto"):
+                        elif cmd.startswith("spt"):
                           dan = text.split(" ")
                           num = int(dan[1])
 #                          ret_ = "╔══[ Call Private ]"
@@ -4755,7 +4757,7 @@ def bot(op):
                                 except:
                                     pass
 
-                        elif cmd == "g m":
+                        elif cmd == "gm":
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 ginfo = cl.getGroup(msg.to)
@@ -4771,7 +4773,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 sw.updateGroup(G)
 
-                        elif cmd == "g p":
+                        elif cmd == "gp":
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 kj.sendMessage(msg.to, "Ghost dipaksah Out "+str(G.name))
@@ -5034,7 +5036,7 @@ def bot(op):
 #===========BOT UPDATE============#
 
 #===========BOT UPDATE============#
-                        elif msg.text in ["Cipok","Cek"]:
+                        elif msg.text in ["Cipok","Cek","Hay"]:
                                if wait["selfbot"] == True:
                                 if msg._from in admin:
                                  group = cl.getGroup(msg.to)
@@ -6050,7 +6052,7 @@ def bot(op):
                             zodiak = data["data"]["zodiak"]
                             cl.sendMessage(msg.to,"「 Date Info 」\n"+"「✭」 Date Of Birth : "+lahir+"\n「✭」 Age : "+usia+"\n「✭」 Ultah : "+ultah+"\n「✭」 Zodiak : "+zodiak)
 
-                        elif cmd.startswith("spamtag: "):
+                        elif cmd.startswith("st: "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 proses = text.split(":")
@@ -6059,7 +6061,7 @@ def bot(op):
                                 Setmain["RAlimit"] = num
                                 cl.sendText(msg.to,"「 Status Spamtag 」\nBerhasil diubah jadi {} kali".format(str(strnum)))
 
-                        elif cmd.startswith("spamcall: "):
+                        elif cmd.startswith("sc: "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 proses = text.split(":")
@@ -6068,7 +6070,7 @@ def bot(op):
                                 wait["limit"] = num
                                 cl.sendText(msg.to,"「 Status Spamcall 」\nBerhasil diubah jadi {} kali".format(str(strnum)))
 
-                        elif cmd.startswith("spamtag "):
+                        elif cmd.startswith("st "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 if 'MENTION' in msg.contentMetadata.keys()!=None:
@@ -6219,7 +6221,7 @@ def bot(op):
                                 except:
                                     pass           
 
-                        elif cmd == "mm":
+                        elif cmd == "m":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -6250,7 +6252,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 cl.updateGroup(G)
 
-                        elif cmd == "pp":
+                        elif cmd == "p":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
